@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+
+:root {
+  --bg: #FFFFFF;
+  --surface: #F7F7F7;
+  --text: #333333;
+  --muted: #AAAAAA;
+  --accent: #FF5722;
+  --accent-text: #FFFFFF;
+  --border: #DDDDDD;
+  --radius: 8px;
+  --display: 'Lato', Georgia, serif;
+  --body: 'Inter', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--body); background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+h1,h2,h3,h4 { font-family: var(--display); line-height: 1.2; }
+a { color: var(--accent); text-decoration: none; }
+button { font-family: var(--body); cursor: pointer; border: none; outline: none; }
+input,select,textarea { font-family: var(--body); outline: none; }
+
+.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+.container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 15px 32px; background: var(--accent); color: var(--accent-text);
+  font-size: 16px; font-weight: 600; border-radius: var(--radius);
+  transition: opacity 0.15s, transform 0.1s; letter-spacing: 0.01em; width: 100%; gap: 8px;
+}
+.btn-primary:hover { opacity: 0.91; }
+.btn-primary:active { transform: scale(0.99); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: calc(var(--radius) + 4px); padding: 24px; }
+.badge { display: inline-flex; align-items: center; padding: 4px 12px; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; }
+.stars { color: #f59e0b; font-size: 18px; letter-spacing: 2px; }
+.section { padding: 72px 0; }
+
+.cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: #1e1e2e; color: #e2e8f0; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; box-shadow: 0 -4px 20px rgba(0,0,0,0.2); }
+
+@media (max-width: 640px) {
+  .section { padding: 48px 0; }
+  .container, .container-wide { padding: 0 16px; }
+}
